@@ -7,7 +7,7 @@ export default function Home() {
           <main className="min-h-screen flex flex-col items-center justify-center p-0" style={{ background: "var(--background)" }}>
             <section className="w-full flex flex-col items-center justify-center py-20" style={{ background: "#f8f6f2" }}>
               <div className="max-w-3xl w-full flex flex-col items-center gap-6 px-6">
-                <div className="rounded-full shadow-lg mb-4 w-[140px] h-[140px] flex items-center justify-center bg-gray-200 text-gray-500 text-xl">En proceso</div>
+                <img src="/profile.jpg" alt="Foto de perfil" className="rounded-full shadow-lg mb-4" width={140} height={140} />
                 <h1 className="text-5xl font-bold accent mb-2 text-center">¡Hola! Soy Yalyne Bolla</h1>
                 <h2 className="text-2xl font-semibold accent mb-4 text-center">Analista de Datos & Business Intelligence</h2>
                 <p className="text-lg text-center mb-6" style={{ color: "#222" }}>
