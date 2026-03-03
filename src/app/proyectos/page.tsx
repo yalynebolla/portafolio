@@ -26,6 +26,7 @@ export default function Proyectos() {
       tag: "RRHH",
       herramientas: ["Power BI", "ETL"],
       numero: "02",
+      link: "https://app.powerbi.com/groups/me/reports/fac6cc6e-1230-40cf-8d41-22188a124082/cb11835ec30006232987?experience=power-bi"
     },
     {
       titulo: "Indicadores Mundiales",
@@ -569,12 +570,21 @@ export default function Proyectos() {
                       ))}
                     </div>
                     {!proy.proximamente && (
-                      <button className="card-btn">
-                        Ver reporte interactivo
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </button>
+                      proy.link ? (
+                        <a href={proy.link} target="_blank" rel="noopener noreferrer" className="card-btn">
+                          Ver reporte interactivo
+                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </a>
+                      ) : (
+                        <button className="card-btn">
+                          Ver reporte interactivo
+                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </button>
+                      )
                     )}
                   </div>
                 </>
