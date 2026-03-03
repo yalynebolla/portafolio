@@ -51,7 +51,8 @@ export default function Proyectos() {
           --bg: #f8f9fb;
           --dark: #0f172a;
         }
-
+        },
+          link: "https://app.powerbi.com/groups/me/reports/15fce903-aa4d-48bd-8944-0cbcfe3554fe?pbi_source=desktop"
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
@@ -586,6 +587,23 @@ export default function Proyectos() {
                         </button>
                       )
                     )}
+                      {!proy.proximamente && (
+                        proy.link ? (
+                          <a href={proy.link} target="_blank" rel="noopener noreferrer" className="card-btn">
+                            Ver reporte interactivo
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </a>
+                        ) : (
+                          <button className="card-btn">
+                            Ver reporte interactivo
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </button>
+                        )
+                      )}
                   </div>
                 </>
               );
