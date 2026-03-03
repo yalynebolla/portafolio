@@ -12,7 +12,7 @@ export default function Proyectos() {
               title="Power BI Report - Análisis de Transportadoras"
               width="100%"
               height="500"
-              src="https://app.powerbi.com/groups/me/reports/b593e33b-c140-4fe0-b58d-5d95aa6b361c?pbi_source=desktop"
+              src="https://licenciasonline449-my.sharepoint.com/:u:/g/personal/ybolla_licenciasonline_com/IQASVj200PewQoE6Ap1S7El9AalUmhmrkd_Pq_Yu-jrp1i4?e=PYyXGK"
               frameBorder="0"
               allowFullScreen={true}
               className="rounded-lg border"
