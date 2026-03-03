@@ -13,7 +13,7 @@ export default function Proyectos() {
   const proyectos = [
     {
       titulo: "Análisis de Transportadoras",
-      img: "/analisis1.jpg",
+      img: "/analisis2.jpg",
       descripcion: "Optimización de costos y tiempos de entrega mediante KPIs logísticos avanzados. Visualización de rutas críticas y rendimiento por transportadora.",
       tag: "Logística",
       herramientas: ["Power BI", "DAX", "Excel"],
@@ -21,7 +21,7 @@ export default function Proyectos() {
     },
     {
       titulo: "Gestión de Recursos Humanos",
-      img: "/analisis2.jpg",
+      img: "/analisis3.jpg",
       descripcion: "Dashboard de métricas clave, rotación y desempeño de talento humano. Seguimiento de indicadores estratégicos de RRHH en tiempo real.",
       tag: "RRHH",
       herramientas: ["Power BI", "ETL"],
@@ -29,12 +29,12 @@ export default function Proyectos() {
     },
     {
       titulo: "Indicadores Mundiales",
-      img: "/analisis3.jpg",
+      img: "/analisis1.jpg",
       descripcion: "Reporte interactivo de tendencias globales y patrones regionales. Análisis comparativo de métricas internacionales por país y región.",
       tag: "Global",
       herramientas: ["Power BI", "SQL"],
       numero: "03",
-      proximamente: true,
+      proximamente: false,
     }
   ];
 
