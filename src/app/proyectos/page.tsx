@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 
 export default function Proyectos() {
   const [scrolled, setScrolled] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -11,16 +10,10 @@ export default function Proyectos() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleMouse = (e: MouseEvent) => setMousePos({ x: e.clientX, y: e.clientY });
-    window.addEventListener("mousemove", handleMouse);
-    return () => window.removeEventListener("mousemove", handleMouse);
-  }, []);
-
   const proyectos = [
     {
       titulo: "Análisis de Transportadoras",
-      img: "/logistica-dashboard.png",
+      img: "/analisis1.jpg",
       descripcion: "Optimización de costos y tiempos de entrega mediante KPIs logísticos avanzados. Visualización de rutas críticas y rendimiento por transportadora.",
       tag: "Logística",
       herramientas: ["Power BI", "DAX", "Excel"],
@@ -28,7 +21,7 @@ export default function Proyectos() {
     },
     {
       titulo: "Gestión de Recursos Humanos",
-      img: "/analisis2.png",
+      img: "/analisis2.jpg",
       descripcion: "Dashboard de métricas clave, rotación y desempeño de talento humano. Seguimiento de indicadores estratégicos de RRHH en tiempo real.",
       tag: "RRHH",
       herramientas: ["Power BI", "ETL"],
@@ -36,7 +29,7 @@ export default function Proyectos() {
     },
     {
       titulo: "Indicadores Mundiales",
-      img: "/analisis3.png",
+      img: "/analisis3.jpg",
       descripcion: "Reporte interactivo de tendencias globales y patrones regionales. Análisis comparativo de métricas internacionales por país y región.",
       tag: "Global",
       herramientas: ["Power BI", "SQL"],
@@ -67,20 +60,6 @@ export default function Proyectos() {
           overflow-x: hidden;
         }
 
-        /* CURSOR GLOW */
-        .cursor-glow {
-          position: fixed;
-          width: 400px;
-          height: 400px;
-          border-radius: 50%;
-          background: radial-gradient(circle, rgba(6,182,212,0.07) 0%, transparent 70%);
-          pointer-events: none;
-          z-index: 0;
-          transform: translate(-50%, -50%);
-          transition: left 0.3s ease, top 0.3s ease;
-        }
-
-        /* NAVBAR */
         nav {
           position: fixed;
           top: 0;
@@ -120,7 +99,6 @@ export default function Proyectos() {
           gap: 40px;
           list-style: none;
         }
-
         .nav-links a {
           text-decoration: none;
           font-size: 0.75rem;
@@ -135,10 +113,8 @@ export default function Proyectos() {
         .nav-links a.active::after {
           content: '';
           position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 100%;
-          height: 1px;
+          bottom: -4px; left: 0;
+          width: 100%; height: 1px;
           background: var(--accent);
         }
         .nav-links a:hover { color: var(--dark); }
@@ -158,13 +134,12 @@ export default function Proyectos() {
         }
         .nav-cta:hover { background: var(--accent); border-color: var(--accent); }
 
-        /* HERO HEADER */
+        /* PAGE HERO */
         .page-hero {
           padding: 160px 32px 80px;
           position: relative;
           overflow: hidden;
         }
-
         .hero-grid-bg {
           position: absolute;
           inset: 0;
@@ -174,7 +149,6 @@ export default function Proyectos() {
           background-size: 60px 60px;
           z-index: 0;
         }
-
         .page-hero-inner {
           max-width: 1200px;
           margin: 0 auto;
@@ -185,7 +159,6 @@ export default function Proyectos() {
           gap: 60px;
           align-items: end;
         }
-
         .page-eyebrow {
           font-size: 0.7rem;
           font-weight: 600;
@@ -199,11 +172,9 @@ export default function Proyectos() {
         }
         .page-eyebrow::before {
           content: '';
-          width: 30px;
-          height: 1px;
+          width: 30px; height: 1px;
           background: var(--accent);
         }
-
         .page-title {
           font-family: 'Playfair Display', serif;
           font-size: clamp(3rem, 6vw, 5rem);
@@ -211,31 +182,22 @@ export default function Proyectos() {
           color: var(--dark);
           line-height: 1.0;
           letter-spacing: -3px;
-          animation: fadeInUp 0.7s ease both;
         }
-        .page-title em {
-          color: var(--accent);
-          font-style: italic;
-        }
-
+        .page-title em { color: var(--accent); font-style: italic; }
         .page-sub {
           font-size: 1.05rem;
           color: #64748b;
           line-height: 1.8;
           max-width: 440px;
-          animation: fadeInUp 0.7s 0.15s ease both;
           align-self: end;
         }
-
-        /* BIG BG TEXT */
         .bg-text {
           position: absolute;
           font-family: 'Playfair Display', serif;
           font-size: 18rem;
           font-weight: 900;
           color: rgba(6,182,212,0.04);
-          bottom: -40px;
-          right: -20px;
+          bottom: -40px; right: -20px;
           pointer-events: none;
           letter-spacing: -15px;
           line-height: 1;
@@ -246,15 +208,10 @@ export default function Proyectos() {
         .count-strip {
           background: var(--dark);
           padding: 20px 32px;
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          overflow: hidden;
         }
         .count-strip-inner {
           max-width: 1200px;
           margin: 0 auto;
-          width: 100%;
           display: flex;
           align-items: center;
           gap: 20px;
@@ -267,8 +224,7 @@ export default function Proyectos() {
           white-space: nowrap;
         }
         .count-line {
-          flex: 1;
-          height: 1px;
+          flex: 1; height: 1px;
           background: linear-gradient(90deg, rgba(6,182,212,0.4), transparent);
         }
         .count-num {
@@ -279,25 +235,15 @@ export default function Proyectos() {
           white-space: nowrap;
         }
 
-        /* PROJECTS SECTION */
-        .projects-section {
-          padding: 80px 32px 120px;
-          position: relative;
-        }
-
-        .projects-inner {
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-
-        /* FEATURED - first card large */
+        /* PROJECTS */
+        .projects-section { padding: 80px 32px 120px; }
+        .projects-inner { max-width: 1200px; margin: 0 auto; }
         .projects-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 24px;
         }
 
-        /* First card spans full width */
         .card-featured {
           grid-column: 1 / -1;
           display: grid;
@@ -306,38 +252,17 @@ export default function Proyectos() {
           border: 1px solid #e2e8f0;
           border-radius: 24px;
           overflow: hidden;
-          transition: all 0.4s ease;
-          animation: fadeInUp 0.6s 0.1s ease both;
+          transition: border-color 0.3s, box-shadow 0.3s;
         }
         .card-featured:hover {
           border-color: rgba(6,182,212,0.35);
           box-shadow: 0 12px 30px rgba(6,182,212,0.08);
-          transform: translateY(-2px);
         }
+        .card-featured .card-img { height: 360px; }
+        .card-featured .card-body { padding: 48px; justify-content: center; }
+        .card-featured .card-title { font-size: 2rem; }
+        .card-featured .card-desc { font-size: 1rem; }
 
-        .card-featured .card-img {
-          height: 360px;
-        }
-
-        .card-featured .card-body {
-          padding: 48px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-
-        .card-featured .card-title {
-          font-family: 'Playfair Display', serif;
-          font-size: 2rem;
-          font-weight: 700;
-          letter-spacing: -1px;
-        }
-
-        .card-featured .card-desc {
-          font-size: 1rem;
-        }
-
-        /* Regular cards */
         .card-regular {
           background: white;
           border: 1px solid #e2e8f0;
@@ -345,47 +270,31 @@ export default function Proyectos() {
           overflow: hidden;
           display: flex;
           flex-direction: column;
-          transition: all 0.4s ease;
-          position: relative;
+          transition: border-color 0.3s, box-shadow 0.3s;
         }
-        .card-regular:nth-child(2) { animation: fadeInUp 0.6s 0.2s ease both; }
-        .card-regular:nth-child(3) { animation: fadeInUp 0.6s 0.3s ease both; }
-
         .card-regular:hover {
           border-color: rgba(6,182,212,0.35);
           box-shadow: 0 12px 30px rgba(6,182,212,0.08);
-          transform: translateY(-2px);
         }
 
-        /* Shared card styles */
         .card-img {
           position: relative;
           height: 220px;
           overflow: hidden;
           background: #f1f5f9;
         }
-
         .card-img img {
-          width: 100%;
-          height: 100%;
+          width: 100%; height: 100%;
           object-fit: cover;
-          transition: transform 0.6s ease;
         }
-        .card-featured:hover .card-img img,
-        .card-regular:hover .card-img img {
-          transform: scale(1.06);
-        }
-
         .card-img-overlay {
           position: absolute;
           inset: 0;
-          background: linear-gradient(to top, rgba(15,23,42,0.3), transparent);
+          background: linear-gradient(to top, rgba(15,23,42,0.25), transparent);
         }
-
         .card-tag {
           position: absolute;
-          top: 16px;
-          left: 16px;
+          top: 16px; left: 16px;
           background: white;
           color: var(--dark);
           font-size: 0.68rem;
@@ -397,11 +306,9 @@ export default function Proyectos() {
           border: 1px solid rgba(6,182,212,0.2);
           z-index: 2;
         }
-
         .card-num {
           position: absolute;
-          bottom: 16px;
-          right: 16px;
+          bottom: 16px; right: 16px;
           font-family: 'Playfair Display', serif;
           font-size: 1.2rem;
           font-style: italic;
@@ -410,8 +317,6 @@ export default function Proyectos() {
           opacity: 0.6;
           z-index: 2;
         }
-
-        /* PRÓXIMAMENTE overlay */
         .proximamente-overlay {
           position: absolute;
           inset: 0;
@@ -434,10 +339,7 @@ export default function Proyectos() {
           padding: 8px 18px;
           border-radius: 100px;
         }
-        .prox-icon {
-          font-size: 2rem;
-          opacity: 0.4;
-        }
+        .prox-icon { font-size: 2rem; opacity: 0.4; }
 
         .card-body {
           padding: 28px;
@@ -445,7 +347,6 @@ export default function Proyectos() {
           display: flex;
           flex-direction: column;
         }
-
         .card-title {
           font-family: 'Playfair Display', serif;
           font-size: 1.35rem;
@@ -453,13 +354,7 @@ export default function Proyectos() {
           color: var(--dark);
           letter-spacing: -0.5px;
           margin-bottom: 12px;
-          transition: color 0.3s;
         }
-        .card-featured:hover .card-title,
-        .card-regular:hover .card-title {
-          color: var(--accent-dark);
-        }
-
         .card-desc {
           font-size: 0.92rem;
           color: #64748b;
@@ -467,14 +362,12 @@ export default function Proyectos() {
           flex: 1;
           margin-bottom: 24px;
         }
-
         .card-tools {
           display: flex;
           flex-wrap: wrap;
           gap: 8px;
           margin-bottom: 24px;
         }
-
         .tool-chip {
           font-size: 0.7rem;
           font-weight: 600;
@@ -485,12 +378,10 @@ export default function Proyectos() {
           padding: 5px 12px;
           border-radius: 100px;
         }
-
         .card-btn {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          text-decoration: none;
           background: var(--dark);
           color: white;
           font-size: 0.8rem;
@@ -499,19 +390,16 @@ export default function Proyectos() {
           border-radius: 100px;
           border: none;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: background 0.3s, box-shadow 0.3s;
           letter-spacing: 0.05em;
           align-self: flex-start;
         }
         .card-btn:hover {
           background: var(--accent);
-          transform: translateX(3px);
           box-shadow: 0 8px 24px rgba(6,182,212,0.3);
         }
-        .card-btn svg { transition: transform 0.3s; }
-        .card-btn:hover svg { transform: translateX(3px); }
 
-        /* CTA BOTTOM */
+        /* CTA */
         .cta-section {
           padding: 80px 32px 100px;
           background: var(--dark);
@@ -528,12 +416,10 @@ export default function Proyectos() {
         }
         .cta-glow {
           position: absolute;
-          width: 600px;
-          height: 300px;
+          width: 600px; height: 300px;
           border-radius: 50%;
           background: radial-gradient(ellipse, rgba(6,182,212,0.12) 0%, transparent 70%);
-          top: 50%;
-          left: 50%;
+          top: 50%; left: 50%;
           transform: translate(-50%, -50%);
           pointer-events: none;
         }
@@ -572,16 +458,14 @@ export default function Proyectos() {
           font-weight: 700;
           padding: 16px 36px;
           border-radius: 100px;
-          transition: all 0.3s ease;
+          transition: background 0.3s, box-shadow 0.3s;
           letter-spacing: 0.05em;
         }
         .cta-btn:hover {
           background: var(--accent-light);
-          transform: translateY(-2px);
           box-shadow: 0 16px 40px rgba(6,182,212,0.4);
         }
 
-        /* FOOTER */
         footer {
           background: #060d1a;
           padding: 28px 32px;
@@ -606,25 +490,14 @@ export default function Proyectos() {
           color: #475569;
         }
 
-        /* ANIMS */
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(24px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* RESPONSIVE */
         @media (max-width: 768px) {
           .page-hero-inner { grid-template-columns: 1fr; gap: 20px; }
           .card-featured { grid-template-columns: 1fr; grid-column: 1; }
           .projects-grid { grid-template-columns: 1fr; }
-          .card-featured { grid-column: 1; }
           .nav-links { display: none; }
-          .bg-text { font-size: 8rem; }
+          .bg-text { display: none; }
         }
       `}</style>
-
-      {/* CURSOR GLOW */}
-      <div className="cursor-glow" style={{ left: mousePos.x, top: mousePos.y }} />
 
       {/* NAVBAR */}
       <nav className={scrolled ? 'scrolled' : 'top'}>
@@ -632,9 +505,9 @@ export default function Proyectos() {
           <a href="/" className="logo">YB.</a>
           <ul className="nav-links">
             <li><a href="/">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="/#sobre-mi">Sobre mí</a></li>
             <li><a href="/proyectos" className="active">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="/#contacto">Contacto</a></li>
           </ul>
           <a href="mailto:yalynne_bolla@hotmail.com" className="nav-cta">Hablemos</a>
         </div>
@@ -647,9 +520,7 @@ export default function Proyectos() {
         <div className="page-hero-inner">
           <div>
             <div className="page-eyebrow">Portfolio de trabajo</div>
-            <h1 className="page-title">
-              Proyectos<br /><em>de datos</em>
-            </h1>
+            <h1 className="page-title">Proyectos<br /><em>de datos</em></h1>
           </div>
           <p className="page-sub">
             Soluciones visuales diseñadas para transformar datos crudos en decisiones estratégicas. Cada dashboard cuenta una historia.
@@ -662,25 +533,18 @@ export default function Proyectos() {
         <div className="count-strip-inner">
           <span className="count-label">Proyectos publicados</span>
           <div className="count-line" />
-          <span className="count-num">
-            {proyectos.filter(p => !p.proximamente).length} de {proyectos.length} casos
-          </span>
+          <span className="count-num">{proyectos.filter(p => !p.proximamente).length} de {proyectos.length} casos</span>
         </div>
       </div>
 
-      {/* PROJECTS */}
+      {/* PROJECTS GRID */}
       <section className="projects-section">
         <div className="projects-inner">
           <div className="projects-grid">
             {proyectos.map((proy, index) => {
               const isFeatured = index === 0;
-              const CardWrapper = ({ children }: { children: React.ReactNode }) =>
-                isFeatured
-                  ? <div className="card-featured">{children}</div>
-                  : <div className="card-regular">{children}</div>;
-
-              return (
-                <CardWrapper key={index}>
+              const cardContent = (
+                <>
                   <div className="card-img">
                     {proy.proximamente ? (
                       <div className="proximamente-overlay">
@@ -689,20 +553,13 @@ export default function Proyectos() {
                       </div>
                     ) : (
                       <>
-                        <img
-                          src={proy.img}
-                          alt={proy.titulo}
-                          onError={e => {
-                            (e.target as HTMLImageElement).style.display = 'none';
-                          }}
-                        />
+                        <img src={proy.img} alt={proy.titulo} />
                         <div className="card-img-overlay" />
                       </>
                     )}
                     <div className="card-tag">{proy.tag}</div>
                     <div className="card-num">{proy.numero}</div>
                   </div>
-
                   <div className="card-body">
                     <h2 className="card-title">{proy.titulo}</h2>
                     <p className="card-desc">{proy.descripcion}</p>
@@ -720,8 +577,12 @@ export default function Proyectos() {
                       </button>
                     )}
                   </div>
-                </CardWrapper>
+                </>
               );
+
+              return isFeatured
+                ? <div className="card-featured" key={index}>{cardContent}</div>
+                : <div className="card-regular" key={index}>{cardContent}</div>;
             })}
           </div>
         </div>
@@ -733,9 +594,7 @@ export default function Proyectos() {
         <div className="cta-inner">
           <div className="cta-eyebrow">✦ ¿Trabajamos juntos? ✦</div>
           <h2 className="cta-title">¿Tenés un proyecto<br /><em>en mente?</em></h2>
-          <p className="cta-sub">
-            Estoy disponible para nuevos proyectos de análisis de datos y consultoría en Business Intelligence.
-          </p>
+          <p className="cta-sub">Estoy disponible para nuevos proyectos de análisis de datos y consultoría en Business Intelligence.</p>
           <a href="mailto:yalynne_bolla@hotmail.com" className="cta-btn">
             Escribime
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -754,5 +613,3 @@ export default function Proyectos() {
     </>
   );
 }
-
-
