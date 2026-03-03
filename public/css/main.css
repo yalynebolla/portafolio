@@ -1,0 +1,43 @@
+/* Botones principales estilo moderno */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #2bb7ff 0%, #00c6a2 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px rgba(43,183,255,0.12);
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  font-size: 1.1rem;
+  margin: 0 8px;
+}
+.cta-btn:hover {
+  background: linear-gradient(90deg, #00c6a2 0%, #2bb7ff 100%);
+  box-shadow: 0 4px 16px rgba(43,183,255,0.18);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Imagen de perfil */
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Mejoras generales */
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f8f6f2;
+  color: #222;
+}
+.section-title.accent {
+  color: #2bb7ff;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
