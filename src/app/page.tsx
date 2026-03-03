@@ -1,6 +1,3 @@
-import Image from "next/image";
-
-
 
 export default function Home() {
   return (
@@ -26,11 +23,5 @@ export default function Home() {
               </div>
             </section>
           </main>
-          <h3 className="text-2xl font-bold mb-2 accent">Contacto</h3>
-          <p className="mb-1"><span className="font-semibold">Correo:</span> <a href="mailto:yalynne_bolla@hotmail.com" className="accent">yalynne_bolla@hotmail.com</a></p>
-          <p><span className="font-semibold">Teléfono:</span> <a href="tel:+595982113599" className="accent">+595 982 113599</a></p>
-        </div>
-      </div>
-    </main>
   );
 }
