@@ -588,23 +588,6 @@ export default function Proyectos() {
                         </button>
                       )
                     )}
-                      {!proy.proximamente && (
-                        proy.link ? (
-                          <a href={proy.link} target="_blank" rel="noopener noreferrer" className="card-btn">
-                            Ver reporte interactivo
-                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          </a>
-                        ) : (
-                          <button className="card-btn">
-                            Ver reporte interactivo
-                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          </button>
-                        )
-                      )}
                   </div>
                 </>
               );
