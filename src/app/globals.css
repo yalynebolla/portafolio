@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
+  --background: #f8f6f2; /* blanco hueso */
   --foreground: #171717;
+  --accent: #2bb7ff; /* celeste */
 }
 
 @theme inline {
@@ -23,4 +25,25 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.btn-celeste {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-celeste:hover {
+  background: #1a8ecb;
 }
