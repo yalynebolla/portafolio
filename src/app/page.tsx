@@ -25,7 +25,6 @@ export default function Home() {
         </div>
       </section>
 
-      // ...existing code...
 
       {/* Contacto Section */}
       <section className="w-full flex flex-col items-center justify-center py-10 px-4 bg-[var(--background)]">
