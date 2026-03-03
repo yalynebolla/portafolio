@@ -36,7 +36,6 @@ export default function Proyectos() {
             <h2 className="text-2xl font-semibold mb-4 accent">Indicadores Mundiales</h2>
             <div className="flex flex-col items-center justify-center min-h-[200px]">
               <img src="/analisis3.png" alt="Indicadores Mundiales" className="w-full max-w-md rounded-lg shadow mb-4" />
-            </div>
               <span className="text-lg text-gray-500">Próximamente disponible.</span>
             </div>
             <p className="mt-4" style={{ color: "#222" }}>
