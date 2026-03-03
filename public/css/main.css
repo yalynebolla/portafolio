@@ -1,7 +1,101 @@
-/* Botones principales estilo moderno */
+
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f8f6f2;
+  color: #222;
+  margin: 0;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+.header {
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.nav__logo-img {
+  height: 48px;
+}
+.nav__list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav__list-link {
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.nav__list-link:hover {
+  color: #2bb7ff;
+}
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #2bb7ff;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
+    box-shadow: 0 2px 8px #0002;
+    border-radius: 0 0 16px 16px;
+    z-index: 100;
+  }
+  .nav__list.open {
+    display: flex;
+  }
+  .nav__toggle {
+    display: block;
+  }
+}
+.hero-content-wrapper {
+  text-align: center;
+}
+.profile-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  border: 6px solid #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: #2bb7ff;
+  margin-bottom: 16px;
+}
 .cta-btn {
   display: inline-block;
-  padding: 12px 32px;
+  padding: 14px 36px;
   background: linear-gradient(90deg, #2bb7ff 0%, #00c6a2 100%);
   color: #fff;
   font-weight: 600;
@@ -18,37 +112,48 @@
   box-shadow: 0 4px 16px rgba(43,183,255,0.18);
   transform: translateY(-2px) scale(1.04);
 }
-
-/* Imagen de perfil */
-.profile-img {
-  width: 380px;
-  height: 380px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 16px;
-  border: 4px solid #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-}
-
-/* Mejoras generales */
-body {
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  background: #f8f6f2;
-  color: #222;
-}
 .section-title.accent {
   color: #2bb7ff;
   font-weight: 700;
   letter-spacing: 1px;
+  margin-bottom: 24px;
 }
-
-/* Transiciones visuales para proyectos */
-.project-transition {
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.project {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 24px;
+  max-width: 320px;
+  flex: 1 1 320px;
   transition: box-shadow 0.3s, transform 0.3s;
 }
-.project-transition:hover {
+.project:hover {
   box-shadow: 0 8px 32px rgba(43,183,255,0.18);
   transform: translateY(-8px) scale(1.03);
+}
+.project-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0002;
+  margin: 16px 0;
+}
+.contact-buttons-wrapper {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.footer {
+  background: #fff;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 48px;
+  box-shadow: 0 -2px 8px #0001;
 }
 
 /* Responsive nav */

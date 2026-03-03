@@ -41,74 +41,87 @@
           <a class="cta-btn" href="#contact">Contacto</a>
         </div>
         <div style="display:flex;gap:8px;justify-content:center;margin-top:8px;">
-          <a class="cta-btn" href="#hero">Inicio</a>
-          <a class="cta-btn" href="#about">Acerca</a>
-          <a class="cta-btn" href="#projects">Proyectos</a>
-          <a class="cta-btn" href="#contact">Contacto</a>
-        </div>
-      </section>
-    </div>
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title accent">Acerca de Mí</h2>
-        <div class="about-wrapper">
-          <div class="about-wrapper__info">
-            <p>Soy una profesional orientada a resultados, con experiencia en la interpretación de datos complejos y la generación de informes claros para la toma de decisiones estratégicas. Me motiva descubrir oportunidades ocultas en la información y aportar soluciones innovadoras a los desafíos empresariales.</p>
-            <p>He trabajado en proyectos de optimización logística, análisis de costos y recursos humanos, colaborando con equipos multidisciplinarios para lograr mejoras medibles en procesos y resultados.</p>
-            <p>Mi enfoque combina precisión técnica y visión estratégica, utilizando herramientas como Power BI, Python, Excel y SQL para crear dashboards interactivos y reportes personalizados.</p>
-            <p>Estoy en constante aprendizaje y busco siempre superar expectativas, aportando valor a cada proyecto en el que participo.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Sección de tecnologías eliminada -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title accent">Proyectos</h2>
-        <div class="project-wrapper">
-          <article class="project project-transition">
-            <h3 class="project-title accent">Análisis de Transportadoras</h3>
-            <p>Dashboard para analizar el desempeño de diferentes transportadoras, midiendo costos y tiempos de entrega. Facilita la identificación de oportunidades de optimización y reducción de gastos logísticos.</p>
-            <img src="/analisis1.png" alt="Dashboard Transportadoras" style="max-width:100%;border-radius:16px;box-shadow:0 2px 8px #0002;margin:24px 0;" />
-          </article>
-          <article class="project project-transition">
-            <h3 class="project-title accent">Detalle de Costos y Órdenes</h3>
-            <p>Visualización de métricas clave: órdenes por mes, costos promedio y totales, y desglose por ciudad y transportadora.</p>
-            <img src="/analisis2.png" alt="Detalle de Costos y Órdenes" style="max-width:100%;border-radius:16px;box-shadow:0 2px 8px #0002;margin:24px 0;" />
-          </article>
-          <article class="project project-transition">
-            <h3 class="project-title accent">Ventas y Utilidad por Trimestre</h3>
-            <p>Reporte de ventas, utilidad y margen por trimestre y categoría de producto, con desglose por subcategoría.</p>
-            <img src="/analisis3.png" alt="Ventas y Utilidad por Trimestre" style="max-width:100%;border-radius:16px;box-shadow:0 2px 8px #0002;margin:24px 0;" />
-          </article>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title accent">Contacto</h2>
-        <div class="contact-wrapper">
-          <p>¿Hablamos de tu próximo proyecto?</p>
-          <div class="contact-buttons-wrapper">
-            <a href="mailto:yalynne_bolla@hotmail.com" class="cta-btn">Correo</a>
-            <a href="tel:+595982113599" class="cta-btn">Teléfono</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="container">
-        <p class="footer__text">&copy; <span id="year"></span> Yalyne Bolla. Todos los derechos reservados.</p>
-      </div>
-    </footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-      // Menú responsive
-      const navToggle = document.getElementById('nav__toggle');
-      const navList = document.getElementById('nav__list');
-      navToggle.addEventListener('click', () => {
-        navList.classList.toggle('open');
-      });
-    </script>
-  </body>
-</html>
+
+          <!DOCTYPE html>
+          <html lang="es">
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <title>Portafolio | Yalyne Bolla</title>
+              <link rel="stylesheet" href="./css/main.css" />
+            </head>
+            <body>
+              <header class="header">
+                <nav class="nav container">
+                  <div class="nav__title">
+                    <a href="#hero">
+                      <img src="/assets/devfolio.svg" alt="Logo" class="nav__logo-img" width="115" height="71">
+                    </a>
+                  </div>
+                  <button class="nav__toggle" id="nav__toggle" aria-label="toggle menu">
+                    <span style="font-size:2rem;color:#2bb7ff;">&#9776;</span>
+                  </button>
+                  <ul class="nav__list" id="nav__list">
+                    <li class="nav__list-item"><a class="nav__list-link" href="#about">Acerca</a></li>
+                    <li class="nav__list-item"><a class="nav__list-link" href="#projects">Proyectos</a></li>
+                    <li class="nav__list-item"><a class="nav__list-link" href="#contact">Contacto</a></li>
+                  </ul>
+                </nav>
+              </header>
+              <main>
+                <section id="hero" class="container hero-content-wrapper" style="display:flex;flex-direction:column;align-items:center;">
+                  <img src="/profile.jpg" alt="Foto de perfil" class="profile-img">
+                  <h1 class="hero-title accent">¡Hola! Soy <span class="name">Yalyne Bolla</span></h1>
+                  <h2 class="hero-subtitle accent">Analista de Datos & Business Intelligence</h2>
+                  <p class="hero-description">Especialista en análisis de datos, visualización y BI. Experiencia en análisis de costos, tiempos y desempeño logístico, y creación de dashboards interactivos con Power BI.</p>
+                  <div style="display:flex;gap:16px;justify-content:center;margin-top:16px;">
+                    <a class="cta-btn" href="#about">Sobre mí</a>
+                    <a class="cta-btn" href="#projects">Ver proyectos</a>
+                    <a class="cta-btn" href="#contact">Contacto</a>
+                  </div>
+                </section>
+                <section id="about" class="container">
+                  <h2 class="section-title accent">Acerca de Mí</h2>
+                  <p>Soy una profesional orientada a resultados, con experiencia en la interpretación de datos complejos y la generación de informes claros para la toma de decisiones estratégicas. Me motiva descubrir oportunidades ocultas en la información y aportar soluciones innovadoras a los desafíos empresariales.</p>
+                </section>
+                <section id="projects" class="container">
+                  <h2 class="section-title accent">Proyectos</h2>
+                  <div class="project-wrapper">
+                    <article class="project project-transition">
+                      <h3 class="project-title accent">Análisis de Transportadoras</h3>
+                      <img src="/analisis1.png" alt="Dashboard Transportadoras" class="project-img" />
+                    </article>
+                    <article class="project project-transition">
+                      <h3 class="project-title accent">Detalle de Costos y Órdenes</h3>
+                      <img src="/analisis2.png" alt="Detalle de Costos y Órdenes" class="project-img" />
+                    </article>
+                    <article class="project project-transition">
+                      <h3 class="project-title accent">Ventas y Utilidad por Trimestre</h3>
+                      <img src="/analisis3.png" alt="Ventas y Utilidad por Trimestre" class="project-img" />
+                    </article>
+                  </div>
+                </section>
+                <section id="contact" class="container">
+                  <h2 class="section-title accent">Contacto</h2>
+                  <div class="contact-buttons-wrapper">
+                    <a href="mailto:yalynne_bolla@hotmail.com" class="cta-btn">Correo</a>
+                    <a href="tel:+595982113599" class="cta-btn">Teléfono</a>
+                  </div>
+                </section>
+              </main>
+              <footer class="footer">
+                <div class="container">
+                  <p class="footer__text">&copy; <span id="year"></span> Yalyne Bolla. Todos los derechos reservados.</p>
+                </div>
+              </footer>
+              <script>
+                document.getElementById('year').textContent = new Date().getFullYear();
+                // Menú responsive
+                const navToggle = document.getElementById('nav__toggle');
+                const navList = document.getElementById('nav__list');
+                navToggle.addEventListener('click', () => {
+                  navList.classList.toggle('open');
+                });
+              </script>
+            </body>
+          </html>
