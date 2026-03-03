@@ -25,34 +25,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tecnologías Section */}
-      <section className="w-full flex flex-col items-center justify-center py-10 px-4 bg-white">
-        <div className="max-w-3xl w-full flex flex-col items-center">
-          <h3 className="text-3xl font-bold accent mb-6">Tecnologías Clave</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-            <div className="flex flex-col items-center">
-              <img src="/powerbi-icon.svg" alt="Power BI" className="w-12 h-12 mb-2" />
-              <span className="font-semibold">Power BI</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src="/python.svg" alt="Python" className="w-12 h-12 mb-2" />
-              <span className="font-semibold">Python</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src="/excel.svg" alt="Excel" className="w-12 h-12 mb-2" />
-              <span className="font-semibold">Excel</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src="/sql.svg" alt="SQL" className="w-12 h-12 mb-2" />
-              <span className="font-semibold">SQL</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <img src="/etl-icon.svg" alt="ETL" className="w-12 h-12 mb-2" />
-              <span className="font-semibold">ETL</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      // ...existing code...
 
       {/* Contacto Section */}
       <section className="w-full flex flex-col items-center justify-center py-10 px-4 bg-[var(--background)]">
