@@ -13,7 +13,7 @@ export default function Proyectos() {
   const proyectos = [
     {
       titulo: "Análisis de Transportadoras",
-      img: "/analisis1.png",
+      img: "/logistica-dashboard.png",
       descripcion: "Optimización de costos y tiempos de entrega mediante KPIs logísticos.",
       tag: "Logística",
       herramientas: ["Power BI", "DAX", "Excel"]
