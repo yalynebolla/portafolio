@@ -36,6 +36,7 @@ export default function Proyectos() {
       herramientas: ["Power BI", "SQL"],
       numero: "03",
       proximamente: false,
+      link: "https://app.powerbi.com/groups/me/reports/74dc75d9-564b-4fa9-ae56-0b45e26037ca?pbi_source=desktop"
     }
   ];
 
