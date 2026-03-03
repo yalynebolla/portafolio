@@ -18,6 +18,7 @@ export default function Proyectos() {
       tag: "Logística",
       herramientas: ["Power BI", "DAX", "Excel"],
       numero: "01",
+      link: "https://app.powerbi.com/groups/me/reports/15fce903-aa4d-48bd-8944-0cbcfe3554fe?pbi_source=desktop"
     },
     {
       titulo: "Gestión de Recursos Humanos",
