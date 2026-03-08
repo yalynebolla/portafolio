@@ -18,7 +18,8 @@ export default function Proyectos() {
       tag: "Logística",
       herramientas: ["Power BI", "DAX", "Excel"],
       numero: "01",
-      link: "https://app.powerbi.com/groups/me/reports/15fce903-aa4d-48bd-8944-0cbcfe3554fe?pbi_source=desktop"
+      link: "      link: "https://app.powerbi.com/view?r=eyJrIjoiZWQzY2MxZmEtODkzMi00YjI3LTlkYmItMDQwMTQyNDVlMjBhIiwidCI6IjkzMzM2YWQxLTdhZGItNGYwOC1iMDc4LTA3ZmE4YjU0MWZhNiIsImMiOjR9"
+"
     },
     {
       titulo: "Gestión de Recursos Humanos",
@@ -27,7 +28,7 @@ export default function Proyectos() {
       tag: "RRHH",
       herramientas: ["Power BI", "ETL"],
       numero: "02",
-      link: "https://app.powerbi.com/view?r=eyJrIjoiZWQzY2MxZmEtODkzMi00YjI3LTlkYmItMDQwMTQyNDVlMjBhIiwidCI6IjkzMzM2YWQxLTdhZGItNGYwOC1iMDc4LTA3ZmE4YjU0MWZhNiIsImMiOjR9"
+      link: "https://app.powerbi.com/view?r=https://app.powerbi.com/view?r=eyJrIjoiNWVmNTVkZTgtMGI2Ni00MmZmLWE0NTEtNzc5MTQ1NzM4ZDVlIiwidCI6IjkzMzM2YWQxLTdhZGItNGYwOC1iMDc4LTA3ZmE4YjU0MWZhNiIsImMiOjR9"
     },
     {
       titulo: "Indicadores Mundiales",
@@ -37,7 +38,7 @@ export default function Proyectos() {
       herramientas: ["Power BI", "SQL"],
       numero: "03",
       proximamente: false,
-      link: "https://app.powerbi.com/groups/me/reports/74dc75d9-564b-4fa9-ae56-0b45e26037ca?pbi_source=desktop"
+      link: "https://app.powerbi.com/view?r=eyJrIjoiZTQ2MjU0MzctZWFiZS00MzI0LWI4NTYtMjA4MmRmZDZmNmRlIiwidCI6IjkzMzM2YWQxLTdhZGItNGYwOC1iMDc4LTA3ZmE4YjU0MWZhNiIsImMiOjR9"
     }
   ];
 
