@@ -249,13 +249,12 @@ export default function Proyectos() {
         .projects-section { padding: 80px 32px 120px; }
         .projects-inner { max-width: 1200px; margin: 0 auto; }
         .projects-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          display: flex;
+          flex-direction: column;
           gap: 24px;
         }
 
         .card-featured {
-          grid-column: 1 / -1;
           display: grid;
           grid-template-columns: 1fr 1fr;
           background: white;
@@ -268,24 +267,26 @@ export default function Proyectos() {
           border-color: rgba(6,182,212,0.35);
           box-shadow: 0 12px 30px rgba(6,182,212,0.08);
         }
-        .card-featured .card-img { height: 360px; }
+        .card-featured .card-img { height: 320px; }
         .card-featured .card-body { padding: 48px; justify-content: center; }
         .card-featured .card-title { font-size: 2rem; }
         .card-featured .card-desc { font-size: 1rem; }
 
         .card-regular {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           background: white;
           border: 1px solid #e2e8f0;
           border-radius: 24px;
           overflow: hidden;
-          display: flex;
-          flex-direction: column;
           transition: border-color 0.3s, box-shadow 0.3s;
         }
         .card-regular:hover {
           border-color: rgba(6,182,212,0.35);
           box-shadow: 0 12px 30px rgba(6,182,212,0.08);
         }
+        .card-regular .card-img { height: 320px; }
+        .card-regular .card-body { padding: 48px; justify-content: center; }
 
         .card-img {
           position: relative;
@@ -502,8 +503,8 @@ export default function Proyectos() {
 
         @media (max-width: 768px) {
           .page-hero-inner { grid-template-columns: 1fr; gap: 20px; }
-          .card-featured { grid-template-columns: 1fr; grid-column: 1; }
-          .projects-grid { grid-template-columns: 1fr; }
+          .card-featured { grid-template-columns: 1fr; }
+          .card-regular { grid-template-columns: 1fr; }
           .nav-links { display: none; }
           .bg-text { display: none; }
         }
