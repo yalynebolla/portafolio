@@ -27,7 +27,7 @@ export default function Proyectos() {
       tag: "RRHH",
       herramientas: ["Power BI", "ETL"],
       numero: "02",
-      link: "https://app.powerbi.com/groups/me/reports/fac6cc6e-1230-40cf-8d41-22188a124082/cb11835ec30006232987?experience=power-bi"
+      link: "https://app.powerbi.com/view?r=eyJrIjoiZWQzY2MxZmEtODkzMi00YjI3LTlkYmItMDQwMTQyNDVlMjBhIiwidCI6IjkzMzM2YWQxLTdhZGItNGYwOC1iMDc4LTA3ZmE4YjU0MWZhNiIsImMiOjR9"
     },
     {
       titulo: "Indicadores Mundiales",
